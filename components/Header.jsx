@@ -6,9 +6,10 @@ import { getCategories } from '../services'
 const Header = () => {
     const [categories, setCategories] = useState([]);
 
-  useEffect(() => {
-      getCategories()
-        .then((newCategories) => setCategories(newCategories))
+   useEffect(() => {
+    getCategories().then((newCategories) => {
+      setCategories(newCategories);
+    });
   }, []);
 
   return (
